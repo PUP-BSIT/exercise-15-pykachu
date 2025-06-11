@@ -100,7 +100,7 @@ class Serquina:
                     case self.GOALS_OPTION:
                         self.handle_goals_option()
                     case self.MAIN_MENU_OPTION:
-                        pass
+                        break
                     case _:
                         print("Invalid option. Please try again.")
                         self.buffer_input()

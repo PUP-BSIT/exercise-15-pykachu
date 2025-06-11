@@ -3,8 +3,10 @@ import platform
 
 from pykachu.besa import Besa
 from pykachu.bualat import bualat
+from pykachu.serquina import Serquina
 
 besa = Besa()
+serquina = Serquina()
 
 class Choices:
     BESA_MODULE = 1
@@ -56,7 +58,7 @@ def main():
                 # TODO: Implement Salespara module functionality
             case Choices.SERQUINA_MODULE:
                 clear_screen()
-                # TODO: Implement Serquina module functionality
+                serquina.run_menu()
             case 6:
                 print("Exiting the program. Goodbye!")
                 break
