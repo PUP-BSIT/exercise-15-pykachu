@@ -3,10 +3,12 @@ import platform
 
 from pykachu.besa import Besa
 from pykachu.bualat import bualat
+from pykachu.maestre import Maestre
 from pykachu.serquina import Serquina
 from pykachu.salespara import Salespara
 
 besa = Besa()
+maestre = Maestre()
 serquina = Serquina()
 salespara = Salespara()
 
@@ -54,14 +56,14 @@ def main():
                 bualat.menu()
             case Choices.MAESTRE_MODULE:
                 clear_screen()
-                # TODO: Implement Maestre module functionality
+                maestre.menu()
             case Choices.SALESPARA_MODULE:
                 clear_screen()
                 salespara.run_menu()
             case Choices.SERQUINA_MODULE:
                 clear_screen()
                 serquina.run_menu()
-            case 6:
+            case Choices.EXIT:
                 print("Exiting the program. Goodbye!")
                 break
             case _:

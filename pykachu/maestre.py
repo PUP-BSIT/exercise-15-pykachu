@@ -82,7 +82,8 @@ class Maestre:
                 case self.CHOICE_SHOW_QUOTE:
                     self.show_quote()
                 case self.CHOICE_RETURN_TO_MAINMENU: # Return to Main Menu
-                    pass
+                    print("Returning to the main menu...")
+                    break
                 case _:
                     print("Invalid choice. Please try again.")
                     input("\nPress Enter to continue...")
