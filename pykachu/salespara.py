@@ -105,6 +105,3 @@ class Salespara:
                     case _:
                         print("Invalid option. Please try again.")
                         self.buffer_input()
-
-salespara = Salespara()
-salespara.run_menu()
