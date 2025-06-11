@@ -1,12 +1,12 @@
 import os
 
 class BualatInfo:
-    CHOICE_SHOW_NAME = '1'
-    CHOICE_SHOW_OVERVIEW = '2'
-    CHOICE_SHOW_GOAL = '3'
-    CHOICE_SHOW_TRAITS = '4'
-    CHOICE_SHOW_CRUSH = '5'
-    CHOICE_EXIT = '6'
+    CHOICE_SHOW_NAME = 1
+    CHOICE_SHOW_OVERVIEW = 2
+    CHOICE_SHOW_GOAL = 3
+    CHOICE_SHOW_TRAITS = 4
+    CHOICE_SHOW_CRUSH = 5
+    CHOICE_EXIT = 6
 
     def __init__ (self, name, overview, goal, traits, crush):
         self.name = name
@@ -38,7 +38,6 @@ class BualatInfo:
         print(f"Crush: {self.crush}")
 
     def menu(self):
-        
         # Display menu until user chooses to exit
         while True:
             os.system('cls')
@@ -48,14 +47,19 @@ class BualatInfo:
             print("3. Goal")
             print("4. Traits")
             print("5. Crush")
-            print("6. Exit")
+            print("6. Return to main menu")
 
-            user_choice = input("Please enter your choice: ")
+            try:
+                user_choice = int(input("Please enter your choice (1-6): "))
+            except ValueError:
+                print("Invalid input. Please enter a number between 1 and 6.")
+                input("\nPress Enter to continue...")
+                continue
             
             match user_choice:
                 case self.CHOICE_EXIT: # Exit the menu
-                    print("Exiting the menu.")
-                    return
+                    print("Returning to main menu.")
+                    break
                 case self.CHOICE_SHOW_NAME:
                     self.show_name()
                     input("\nPress Enter to continue...")
@@ -72,7 +76,8 @@ class BualatInfo:
                     self.show_crush()
                     input("\nPress Enter to continue...")
                 case _:
-                    print("Invalid choice. Please select a valid option.")
+                    print("Invalid choice. Please select a valid choice.")
+                    input("\nPress Enter to continue...")
 
 bualat = BualatInfo(
     name = "Bench Brian Bualat",
