@@ -101,9 +101,6 @@ class Serquina:
                         self.handle_goals_option()
                     case self.MAIN_MENU_OPTION:
                         pass
-                    case self.EXIT_OPTION:
-                        print("\nReturning to Serquinas's menu...")
-                        break # Exit the loop to return to the Main Menu
                     case _:
                         print("Invalid option. Please try again.")
                         self.buffer_input()
