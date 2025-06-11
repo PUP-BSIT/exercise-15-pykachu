@@ -4,9 +4,11 @@ import platform
 from pykachu.besa import Besa
 from pykachu.bualat import bualat
 from pykachu.serquina import Serquina
+from pykachu.salespara import Salespara
 
 besa = Besa()
 serquina = Serquina()
+salespara = Salespara()
 
 class Choices:
     BESA_MODULE = 1
@@ -55,7 +57,7 @@ def main():
                 # TODO: Implement Maestre module functionality
             case Choices.SALESPARA_MODULE:
                 clear_screen()
-                # TODO: Implement Salespara module functionality
+                salespara.run_menu()
             case Choices.SERQUINA_MODULE:
                 clear_screen()
                 serquina.run_menu()
