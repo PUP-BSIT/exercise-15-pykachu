@@ -1,6 +1,14 @@
 import os 
+import platform
 
+from pykachu.besa import Besa
 from pykachu.bualat import bualat
+from pykachu.serquina import Serquina
+from pykachu.salespara import Salespara
+
+besa = Besa()
+serquina = Serquina()
+salespara = Salespara()
 
 class Choices:
     BESA_MODULE = 1
@@ -10,10 +18,18 @@ class Choices:
     SERQUINA_MODULE = 5
     EXIT = 6
 
+def clear_screen():
+    # Clear the console screen based on the operating system.
+    os.system('cls' if platform.system() == 'Windows' else 'clear')
+
+def buffer_input():
+    # Wait for user input to continue.
+    input("\nPress 'Enter' to continue...")
+
 def main():
     # Display menu until user chooses to exit
     while True:
-        os.system('cls')
+        clear_screen()
         print("Welcome to the Group Package Program!")
         print("1. Besa Module")
         print("2. Bualat Module")
@@ -26,31 +42,31 @@ def main():
             user_choice = int(input("\nSelect an option (1-6): "))
         except ValueError:
             print("Invalid input. Please enter a number.")
-            input("\nPress Enter to continue...")
+            buffer_input()
             continue
 
         match user_choice:
             case Choices.BESA_MODULE:
-                os.system('cls')
-                # TODO: Implement Besa module functionality
+                clear_screen()
+                besa.run_menu()
             case Choices.BUALAT_MODULE:
-                os.system('cls')
+                clear_screen()
                 bualat.menu()
             case Choices.MAESTRE_MODULE:
-                os.system('cls')
+                clear_screen()
                 # TODO: Implement Maestre module functionality
             case Choices.SALESPARA_MODULE:
-                os.system('cls')
-                # TODO: Implement Salespara module functionality
+                clear_screen()
+                salespara.run_menu()
             case Choices.SERQUINA_MODULE:
-                os.system('cls')
-                # TODO: Implement Serquina module functionality
+                clear_screen()
+                serquina.run_menu()
             case 6:
                 print("Exiting the program. Goodbye!")
                 break
             case _:
                 print("Invalid choice. Please select a valid option (1-6).")
 
-        input("\nPress Enter to continue...")
+        buffer_input()
 
 main()
