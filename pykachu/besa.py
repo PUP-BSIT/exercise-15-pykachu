@@ -84,7 +84,7 @@ class Besa:
         # Loop until the user selects 'Return to Main Menu'
         while True:
             self.clear_screen()
-            self.display_menu()
+            self.menu()
 
             try:
                 user_choice = int(input("Please select an option: "))
