@@ -85,9 +85,16 @@ class Besa:
         while True:
             self.clear_screen()
             self.display_menu()
+
             try:
-                user_choice = int(input("Enter your user_choice: "))
-                match user_choice:
+                user_choice = int(input("Please select an option: "))
+            except ValueError:
+                print("\nInvalid input. Please enter a number "
+                      "corresponding to the menu options.")
+                self.buffer_input()
+                continue
+            
+            match user_choice:
                     case self.GREET_OPTION:
                         self.handle_greet_option()
                     case self.AGE_OPTION:
@@ -103,7 +110,3 @@ class Besa:
                     case _:
                         print("Invalid option. Please try again.")
                         self.buffer_input()
-            except ValueError:
-                print("Invalid input. Please enter a number "
-                      "corresponding to the menu options.")
-                self.buffer_input()
