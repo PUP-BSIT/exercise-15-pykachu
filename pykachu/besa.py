@@ -106,6 +106,7 @@ class Besa:
                     case self.HOBBIES_OPTION:
                         self.handle_hobbies_option()
                     case self.MAIN_MENU_OPTION:
+                        print("\nReturning to main menu...")
                         break # Return to main menu
                     case _:
                         print("Invalid option. Please try again.")

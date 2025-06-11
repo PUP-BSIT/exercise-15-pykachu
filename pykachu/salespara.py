@@ -101,7 +101,8 @@ class Salespara:
                     case self.TRAITS_OPTION:
                         self.handle_traits_option()
                     case self.MAIN_MENU_OPTION:
-                        pass
+                        print("\nReturning to main menu...")
+                        break
                     case _:
                         print("Invalid option. Please try again.")
                         self.buffer_input()
