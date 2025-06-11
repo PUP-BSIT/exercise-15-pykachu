@@ -38,7 +38,6 @@ class BualatInfo:
         print(f"Crush: {self.crush}")
 
     def menu(self):
-        
         # Display menu until user chooses to exit
         while True:
             os.system('cls')
