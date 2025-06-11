@@ -57,7 +57,7 @@ class BualatInfo:
                 continue
             
             match user_choice:
-                case self.CHOICE_EXIT: # Exit the menu
+                case self.CHOICE_EXIT: # Return to main menu
                     print("\nReturning to main menu...")
                     break
                 case self.CHOICE_SHOW_NAME:

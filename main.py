@@ -63,7 +63,7 @@ def main():
             case Choices.SERQUINA_MODULE:
                 clear_screen()
                 serquina.run_menu()
-            case Choices.EXIT:
+            case Choices.EXIT: # Exit the program
                 print("Exiting the program. Goodbye!")
                 break
             case _:

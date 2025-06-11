@@ -99,7 +99,7 @@ class Serquina:
                         self.handle_year_option()
                     case self.GOALS_OPTION:
                         self.handle_goals_option()
-                    case self.MAIN_MENU_OPTION:
+                    case self.MAIN_MENU_OPTION: # Return to main menu
                         print("\nReturning to main menu...")
                         break
                     case _:
