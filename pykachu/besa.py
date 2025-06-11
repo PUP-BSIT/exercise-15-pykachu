@@ -49,7 +49,7 @@ class Besa:
         # Clear screen based on OS
         os.system('cls' if platform.system() == 'Windows' else 'clear')
 
-    def display_menu(self):
+    def menu(self):
         print("\n---[Besa's Menu]---")
         print("--------------------")
         print(f"[{self.GREET_OPTION}] - Greet")
