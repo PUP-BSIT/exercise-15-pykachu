@@ -4,7 +4,7 @@ import platform
 from pykachu.besa import Besa
 from pykachu.bualat import bualat
 from pykachu.serquina import Serquina
-from pykachua.salespara import Salespara
+from pykachu.salespara import Salespara
 
 besa = Besa()
 serquina = Serquina()
